@@ -7,6 +7,10 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Poppins', sans-serif;
     background: #e6d7f3;
@@ -27,7 +31,6 @@
     font-weight: 600;
     color: #6b4ca0;
     margin-bottom: 15px;
-    text-align: center;
     padding: 0 10px;
   }
 
@@ -36,24 +39,29 @@
     max-width: 700px;
     padding: 40px 25px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     display: none;
     animation: fadeIn 1s ease-in-out;
   }
 
-  .active { display: block; }
+  .active {
+    display: block;
+  }
 
   h1 {
     font-size: 2em;
     color: #6b4ca0;
     margin-bottom: 20px;
+    word-wrap: break-word;
   }
 
   p {
     font-size: 1.1em;
     line-height: 1.7em;
     color: #4a3c3c;
+    margin: 0 auto;
+    max-width: 90%;
   }
 
   button {
@@ -65,7 +73,7 @@
     cursor: pointer;
     color: #ffffff;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 25px;
     transition: 0.3s;
   }
 
@@ -76,13 +84,17 @@
 
   #reason {
     margin-top: 40px;
-    font-size: 1.2em;
-    min-height: 120px;
+    font-size: 1.1em;
+    min-height: 150px;
     line-height: 1.8em;
     padding: 0 10px;
+    white-space: pre-line;
   }
 
-  .fade { opacity: 0; transition: 0.3s; }
+  .fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
   .floating-heart {
     position: fixed;
@@ -109,8 +121,11 @@
       padding: 15px;
     }
     .section {
-      padding: 25px 15px;
+      padding: 30px 20px;
       border-radius: 15px;
+    }
+    .title {
+      font-size: 1.4em;
     }
     h1 {
       font-size: 1.6em;
@@ -127,69 +142,78 @@
 
   @media (max-width: 480px) {
     .title {
-      font-size: 1.3em;
+      font-size: 1.2em;
+    }
+    .section {
+      padding: 25px 15px;
     }
     h1 {
       font-size: 1.4em;
     }
     p, #reason {
       font-size: 0.95em;
+      line-height: 1.6em;
+    }
+    button {
+      font-size: 0.95em;
+      padding: 9px 18px;
     }
   }
 </style>
 </head>
 <body>
 
-<div class="title">To The Light Of My life</div>
+<div class="title">To The Light Of My Life</div>
 
 <div id="opening" class="section active">
   <h1>Happy Birthday, Kaly 🤍</h1>
   <p>
-    I don’t say this often maybe because words have never been my strongest language. But if I could put it into something tangible, it would be this.<br>
-    Click below to see 23 reasons why I love you, one by one.
+    I don’t say this often maybe because words have never been my strongest language. I think you already know that. But if I could put it into something tangible, it would be this. Click below to see why I still love you — one by one.
   </p>
   <button onclick="showReasons()">🤍 Show me 🤍</button>
 </div>
 
 <div id="reasons-section" class="section">
-  <h1>23 Reasons Why I Love You</h1>
-  <div id="reason">because you always smell like something warm and familiar.</div>
-  <button onclick="nextReason()">🤍 Next Reason 🤍</button>
+  <h1>Why I Still Love You</h1>
+  <div id="reason"></div>
+  <button onclick="nextReason()">🤍 Next 🤍</button>
 </div>
 
 <div id="closing" class="section">
   <h1>Happy Birthday, Sayang 🤍</h1>
-  <p>
-    I don’t have big words, or some dramatic way to say it. I just really love being next to you, seeing you, knowing you’re there. That’s enough for me and i hope you always know that’s what i mean when i say i love you.
+  <p style="white-space: pre-line; margin-top: 20px;">
+    Happy birthday, sayang.
+    We’ve grown, we’ve changed, we’ve been tested. But every version of us, no matter how far apart or how close, you’re still the one I want beside me. And I think I always will. Lastly, I don’t have big words, or some dramatic way to say it. I just really love being next to you, seeing you, knowing you’re there. That’s enough for me and i hope you always know that’s what i mean when i say i love you.
+
+    — Khalil
   </p>
-  <p style="margin-top:50px; font-style: italic;">— khalil</p>
 </div>
 
 <script>
   const reasons = [
-    "Because you always smell like something warm and familiar.",
-    "Because you’re so damn curious about everything even about why the moon looks bigger in december.",
-    "Because you see the best in people, even when they don’t, even when it hurts you.",
-    "Because you don’t give up on people too fast. It’s something i both admire and worry about.",
-    "Because you treat love like something sacred, not something to win, or to own.",
-    "Because you don’t need big gestures to show you care. your consistency says it all.",
-    "Because you make the most mundane days feel worth remembering.",
-    "Because you bring life into routines and suddenly my habits don’t feel repetitive anymore.",
-    "Because when i’m quiet, you never force me to talk, you just sit close.",
-    "Because you somehow understand my silence better than my words.",
-    "Because you never made me feel guilty for being quiet.",
-    "Because you never try to fix me, you just stay and somehow that’s what heals me.",
-    "Because you’ve seen me at my lowest and didn’t flinch.",
-    "Because you never made me feel like i had to be perfect.",
-    "Because you say aku sayang kamu in that tone that sounds like a promise.",
-    "Because you trust me and that’s something i’ll always protect.",
-    "Because you believe in me more than i do sometimes.",
-    "Because you make me want to be better, not because you asked me to, but because being loved by you feels like something i want to deserve.",
-    "Because you look at the world with this kind of wonder that i lost a long time ago.",
-    "Because even in silence, even in distance, it’s still you i find myself coming home to.",
-    "Because you never stopped choosing me even when it wasn’t easy.",
-    "Because you’re you and that’s enough reason for everything else.",
-    "Because with you, everything finally makes sense."
+    "Because you’re still the one who makes ordinary mornings feel special. The kind where nothing really happens, but the air feels softer because you’re there.",
+    "Because you’re still the one who listens not just to what I say, but to the pauses between my words. You always seem to understand the things I can’t explain, and that’s something I’ll never take for granted.",
+    "Because you’re still the one who looks at me with quiet certainty. Even after all the storms, you never made me feel like love was a choice you had to reconsider.",
+    "Because you’re still the one who reminds me that comfort doesn’t mean complacency. It means safety a kind of peace I didn’t know I needed until you gave it to me.",
+    "Because you’re still the one who brings lightness into heavy days. Your laughter has a way of making everything seem a little less impossible.",
+    "Because you’re still the one who holds space for me, even when I don’t know how to ask for it. You never rush me or fill the silence just to make it easier. You let it breathe, and somehow, that’s enough.",
+    "Because you’re still the one who believes in me with a kind of faith that feels unshakable. Even when I fall short, you never make me feel like I’ve failed you.",
+    "Because you’re still the one who never treated love like a game. With you, it’s never about winning it’s about staying, choosing, and trying again, even when it’s hard.",
+    "Because you’re still the one who makes coming home feel like more than just a place. It’s a feeling  the quiet after a long day, the warmth after the cold. It’s you.",
+    "Because you’re still the one who knows the rhythm of my days, the way I overthink at night, the way I look for coffee before words, the way I fall asleep faster when you’re near.",
+    "Because you’re still the one who sees the best in people, even when they hurt you. It scares me sometimes, how kind your heart is. But I love you for it anyway.",
+    "Because you’re still the one who loves gently. Never loud, never showy, just constant, steady, the kind that stays even when the noise fades.",
+    "Because you’re still the one who never tried to fix me. You just stayed, quietly, and somehow that was enough to make me want to heal on my own.",
+    "Because you’re still the one who makes me believe that softness and strength can exist in the same person.",
+    "Because you’re still the one who doesn’t let the world harden you. You still look at things with that kind of wonder I lost a long time ago.",
+    "Because you’re still the one who brings life into everything repetitive. With you, even routines feel like something worth living for.",
+    "Because you’re still the one who makes me want to become a better man, not out of pressure, but because you make being better feel possible.",
+    "Because you’re still the one I reach for when things get quiet. My mind could be a thousand miles away, but somehow it always finds its way back to you.",
+    "Because you’re still the one I trust the most with my thoughts, my fears, my quiet dreams. All of it.",
+    "Because you’re still the one who stayed when things got uncertain. And maybe that’s the thing about you, you don’t just promise, you keep it.",
+    "Because you’re still the one I’d choose, even if I had to start over. Again and again, I know I’d still find my way to you.",
+    "Because you’re still the one who makes everything else make sense.",
+    "Because you’re still the one — my one."
   ];
 
   let currentReason = 0;
@@ -202,7 +226,7 @@
 
   function nextReason() {
     currentReason++;
-    if(currentReason >= reasons.length) {
+    if (currentReason >= reasons.length) {
       document.getElementById('reasons-section').classList.remove('active');
       document.getElementById('closing').classList.add('active');
       return;
@@ -215,16 +239,16 @@
     }, 300);
   }
 
-  // floating hearts
+  // floating hearts animation
   setInterval(() => {
     const heart = document.createElement('div');
     heart.classList.add('floating-heart');
     heart.innerHTML = '🤍';
-    heart.style.left = Math.random()*100 + 'vw';
-    heart.style.fontSize = Math.random()*20 + 14 + 'px';
-    heart.style.animationDuration = (Math.random()*4 + 3) + 's';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 20 + 14 + 'px';
+    heart.style.animationDuration = (Math.random() * 4 + 3) + 's';
     document.body.appendChild(heart);
-    setTimeout(()=>heart.remove(),7000);
+    setTimeout(() => heart.remove(), 7000);
   }, 400);
 </script>
 </body>
