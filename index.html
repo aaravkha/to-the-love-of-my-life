@@ -133,12 +133,14 @@
 <body>
 
 <!-- ===== BACKGROUND MUSIC ===== -->
-<iframe width="0" height="0"
+<iframe id="ytmusic" width="0" height="0" style="display:none;"
   src="https://www.youtube.com/embed/XisESjCT48g?autoplay=1&loop=1&playlist=XisESjCT48g"
   frameborder="0"
   allow="autoplay; encrypted-media"
   allowfullscreen>
 </iframe>
+
+<button id="playMusicBtn" style="display:none;">🎶 Play Music</button>
 
 <div class="title">To The Light Of My Life</div>
 
@@ -220,6 +222,25 @@
       reasonDiv.classList.remove('fade');
     }, 300);
   }
+
+  // autoplay logic (for mobile browsers)
+  window.addEventListener('load', () => {
+    const iframe = document.getElementById('ytmusic');
+    const playBtn = document.getElementById('playMusicBtn');
+
+    // coba autoplay
+    iframe.src += '&autoplay=1';
+    setTimeout(() => {
+      // kalau gak jalan, munculkan tombol
+      playBtn.style.display = 'block';
+    }, 1500);
+
+    playBtn.addEventListener('click', () => {
+      iframe.style.display = 'none';
+      iframe.src = "https://www.youtube.com/embed/XisESjCT48g?autoplay=1&loop=1&playlist=XisESjCT48g";
+      playBtn.style.display = 'none';
+    });
+  });
 
   // floating hearts animation
   setInterval(() => {
