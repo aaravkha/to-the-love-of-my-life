@@ -7,9 +7,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
 
   body {
     font-family: 'Poppins', sans-serif;
@@ -45,9 +43,7 @@
     animation: fadeIn 1s ease-in-out;
   }
 
-  .active {
-    display: block;
-  }
+  .active { display: block; }
 
   h1 {
     font-size: 2em;
@@ -117,51 +113,32 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
-    body {
-      padding: 15px;
-    }
-    .section {
-      padding: 30px 20px;
-      border-radius: 15px;
-    }
-    .title {
-      font-size: 1.4em;
-    }
-    h1 {
-      font-size: 1.6em;
-    }
-    p, #reason {
-      font-size: 1em;
-      line-height: 1.6em;
-    }
-    button {
-      font-size: 1em;
-      padding: 10px 20px;
-    }
+    body { padding: 15px; }
+    .section { padding: 30px 20px; border-radius: 15px; }
+    .title { font-size: 1.4em; }
+    h1 { font-size: 1.6em; }
+    p, #reason { font-size: 1em; line-height: 1.6em; }
+    button { font-size: 1em; padding: 10px 20px; }
   }
 
   @media (max-width: 480px) {
-    .title {
-      font-size: 1.2em;
-    }
-    .section {
-      padding: 25px 15px;
-    }
-    h1 {
-      font-size: 1.4em;
-    }
-    p, #reason {
-      font-size: 0.95em;
-      line-height: 1.6em;
-    }
-    button {
-      font-size: 0.95em;
-      padding: 9px 18px;
-    }
+    .title { font-size: 1.2em; }
+    .section { padding: 25px 15px; }
+    h1 { font-size: 1.4em; }
+    p, #reason { font-size: 0.95em; line-height: 1.6em; }
+    button { font-size: 0.95em; padding: 9px 18px; }
   }
 </style>
 </head>
 <body>
+
+<!-- ===== BACKGROUND MUSIC ===== -->
+<iframe width="0" height="0"
+  src="https://www.youtube.com/embed/XisESjCT48g?autoplay=1&loop=1&playlist=XisESjCT48g"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+</iframe>
 
 <div class="title">To The Light Of My Life</div>
 
@@ -174,7 +151,7 @@
 </div>
 
 <div id="reasons-section" class="section">
-  <h1>Why I Still Love You</h1>
+  <h1>23 Reasons Why I Love You</h1>
   <div id="reason"></div>
   <button onclick="nextReason()">🤍 Next 🤍</button>
 </div>
@@ -183,7 +160,12 @@
   <h1>Happy Birthday, Sayang 🤍</h1>
   <p style="white-space: pre-line; margin-top: 20px;">
     Happy birthday, sayang.
-    We’ve grown, we’ve changed, we’ve been tested. But every version of us, no matter how far apart or how close, you’re still the one I want beside me. And I think I always will. Lastly, I don’t have big words, or some dramatic way to say it. I just really love being next to you, seeing you, knowing you’re there. That’s enough for me and i hope you always know that’s what i mean when i say i love you.
+    We’ve grown, we’ve changed, we’ve been tested. 
+    But every version of us, no matter how far apart or how close, you’re still the one I want beside me. And I think I always will. 
+
+    I don’t have big words, or some dramatic way to say it. 
+    I just really love being next to you, seeing you, knowing you’re there. 
+    That’s enough for me and I hope you always know that’s what I mean when I say I love you.
 
     — Khalil
   </p>
@@ -192,14 +174,14 @@
 <script>
   const reasons = [
     "Because you’re still the one who makes ordinary mornings feel special. The kind where nothing really happens, but the air feels softer because you’re there.",
-    "Because you’re still the one who listens not just to what I say, but to the pauses between my words. You always seem to understand the things I can’t explain, and that’s something I’ll never take for granted.",
+    "Because you’re still the one who listens, not just to what I say, but to the pauses between my words. You always seem to understand the things I can’t explain, and that’s something I’ll never take for granted.",
     "Because you’re still the one who looks at me with quiet certainty. Even after all the storms, you never made me feel like love was a choice you had to reconsider.",
-    "Because you’re still the one who reminds me that comfort doesn’t mean complacency. It means safety a kind of peace I didn’t know I needed until you gave it to me.",
+    "Because you’re still the one who reminds me that comfort doesn’t mean complacency. It means safety, a kind of peace I didn’t know I needed until you gave it to me.",
     "Because you’re still the one who brings lightness into heavy days. Your laughter has a way of making everything seem a little less impossible.",
     "Because you’re still the one who holds space for me, even when I don’t know how to ask for it. You never rush me or fill the silence just to make it easier. You let it breathe, and somehow, that’s enough.",
     "Because you’re still the one who believes in me with a kind of faith that feels unshakable. Even when I fall short, you never make me feel like I’ve failed you.",
-    "Because you’re still the one who never treated love like a game. With you, it’s never about winning it’s about staying, choosing, and trying again, even when it’s hard.",
-    "Because you’re still the one who makes coming home feel like more than just a place. It’s a feeling  the quiet after a long day, the warmth after the cold. It’s you.",
+    "Because you’re still the one who never treated love like a game. With you, it’s never about winning, it’s about staying, choosing, and trying again, even when it’s hard.",
+    "Because you’re still the one who makes coming home feel like more than just a place. It’s a feeling, the quiet after a long day, the warmth after the cold. It’s you.",
     "Because you’re still the one who knows the rhythm of my days, the way I overthink at night, the way I look for coffee before words, the way I fall asleep faster when you’re near.",
     "Because you’re still the one who sees the best in people, even when they hurt you. It scares me sometimes, how kind your heart is. But I love you for it anyway.",
     "Because you’re still the one who loves gently. Never loud, never showy, just constant, steady, the kind that stays even when the noise fades.",
@@ -209,7 +191,7 @@
     "Because you’re still the one who brings life into everything repetitive. With you, even routines feel like something worth living for.",
     "Because you’re still the one who makes me want to become a better man, not out of pressure, but because you make being better feel possible.",
     "Because you’re still the one I reach for when things get quiet. My mind could be a thousand miles away, but somehow it always finds its way back to you.",
-    "Because you’re still the one I trust the most with my thoughts, my fears, my quiet dreams. All of it.",
+    "Because you’re still the one I trust the most, with my thoughts, my fears, my quiet dreams. All of it.",
     "Because you’re still the one who stayed when things got uncertain. And maybe that’s the thing about you, you don’t just promise, you keep it.",
     "Because you’re still the one I’d choose, even if I had to start over. Again and again, I know I’d still find my way to you.",
     "Because you’re still the one who makes everything else make sense.",
